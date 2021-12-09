@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: sch_jaffle_shop
+    description: This is a copy of application database.
+    schema : jaffle_shop
+    database: raw
+    tables:
+      - name: tbl_customers
+        description: Raw customers data
+        identifier: customers
+        columns:
+          - name: id
+            description: Primary key for customers
+            tests:
+              - unique
+              - not_null
+      - name: tbl_orders
+        description: Raw orders data
+        identifier: orders
+        columns:
+          - name: id
+            description: Primary key for orders
+            tests:
+              - unique
+              - not_null
